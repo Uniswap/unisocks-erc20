@@ -38,7 +38,7 @@ def create_contract(w3, path, *args, **kwargs):
 @pytest.fixture
 def SOCKS(w3):
     deploy = create_contract(w3, 'contracts/socks.vy')
-    tx_hash = deploy.constructor(1000*10**18).transact()
+    tx_hash = deploy.constructor().transact()
     tx_receipt = w3.eth.getTransactionReceipt(tx_hash)
     return ConciseContract(w3.eth.contract(
         address=tx_receipt.contractAddress,
