@@ -13,7 +13,7 @@ allowances: map(address, map(address, uint256))
 
 @public
 def __init__():
-    _supply: uint256 = 1000*10**18
+    _supply: uint256 = 500*10**18
     self.name = 'Unisocks Edition 0'
     self.symbol = 'SOCKS'
     self.decimals = 18
